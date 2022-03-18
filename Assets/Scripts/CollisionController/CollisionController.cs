@@ -45,7 +45,7 @@ public class CollisionController : MonoBehaviour
                 if (typeOfObstacle == TypeOfObstacle.door)
                 {
                     transform.GetChild(0).gameObject.SetActive(true);
-                    Destroy(gameObject, 1);
+                    Destroy(gameObject, .75F);
 
                 }
             }

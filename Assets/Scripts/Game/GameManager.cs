@@ -30,6 +30,7 @@ public class GameManager : Singleton<GameManager>
 
     public void UpdateActiveFire(){
         ActiveFireCounter += 1;
+        // WE CHECK TOTAL FIRE FOR END GAME
         if (ActiveFireCounter == TotalFire)
         {
             EventManager.Instance.EndGame();
