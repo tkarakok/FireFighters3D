@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0470b60e34edb7f43a3ca05dd0aebd12, type: 3}
+  m_Name: Level Settings
+  m_EditorClassIdentifier: 
+  totalFire: 5
+  confetti: {fileID: 6316873688061046093, guid: 2658983739a5f3e4b8921f34c3b2eeb1,
+    type: 3}
+  collisionForFire: 100

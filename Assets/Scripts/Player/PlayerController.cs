@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        
         if (Input.GetKey(KeyCode.W))
         {
             AnimationManager.Instance.Walk();
@@ -37,13 +38,13 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            player.transform.Rotate(0, -1 * force * Time.deltaTime, 0);
-            hose.transform.Rotate(0, -1 * force * Time.deltaTime, 0);
+            player.transform.Rotate(0, -2 * force * Time.deltaTime, 0);
+            hose.transform.Rotate(0, -2 * force * Time.deltaTime, 0);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            player.transform.Rotate(0, 1 * force * Time.deltaTime, 0);
-            hose.transform.Rotate(0, 1 * force * Time.deltaTime, 0);
+            player.transform.Rotate(0, 2 * force * Time.deltaTime, 0);
+            hose.transform.Rotate(0, 2 * force * Time.deltaTime, 0);
         }
     }
 }
