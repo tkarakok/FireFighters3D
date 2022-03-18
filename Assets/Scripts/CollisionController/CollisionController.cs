@@ -26,7 +26,7 @@ public class CollisionController : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         
-        if (_fire)
+        if (_fire && StateManager.Instance.state == State.InGame)
         {
             _collisonCounter++;
             bar.fillAmount = 1 - ((float)_collisonCounter / (float)GameManager.Instance.CollisionForFire);
@@ -39,6 +39,8 @@ public class CollisionController : MonoBehaviour
                     confetti.transform.position = fireEffect[0].transform.position;
                     confetti.GetComponent<ParticleSystem>().Play();
                     _fire = false;
+                    
+                    EventManager.Instance.OffFire();
                 }
                 if (typeOfObstacle == TypeOfObstacle.door)
                 {
