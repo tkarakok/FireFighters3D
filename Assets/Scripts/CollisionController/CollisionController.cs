@@ -20,7 +20,7 @@ public class CollisionController : MonoBehaviour
     private bool _fire = true;
 
     private void Start() {
-        bar.fillAmount = (GameManager.Instance.CollisionForFire - _collisonCounter) / 100;
+        bar.fillAmount = 1;
     }
 
     private void OnParticleCollision(GameObject other)
