@@ -7,7 +7,7 @@ public class PlayerController : Singleton<PlayerController>
     public GameObject player, hose;
     public float force;
     public GameObject waterEffect;
-
+    public Vector3 waveScaleForHose;
 
 
     private void Update()
@@ -50,6 +50,23 @@ public class PlayerController : Singleton<PlayerController>
             }
         }
 
+    }
+
+    public void StartWaveForHose(){
+        StartCoroutine(WaveForHose());
+    }
+
+    IEnumerator WaveForHose(){
+        while (true)
+        {
+            for (int i = 0; i < hose.transform.childCount; i++)
+            {
+                hose.transform.GetChild(i).localScale += waveScaleForHose;
+                yield return new WaitForSeconds(.01f);
+                hose.transform.GetChild(i).localScale -= waveScaleForHose;
+            }
+            
+        }
     }
 
     public void StartForceWater(){

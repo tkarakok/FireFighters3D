@@ -24,6 +24,7 @@ public class EventManager : Singleton<EventManager>
         InGame += () => StateManager.Instance.state = global::State.InGame;
         InGame += UIManager.Instance.UpdateLevelProgressBar;
         InGame += PlayerController.Instance.StartForceWater;
+        InGame += PlayerController.Instance.StartWaveForHose;
         #endregion
 
         #region EndGame
